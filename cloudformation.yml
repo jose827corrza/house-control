@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: This Stack creates the required resources to start the house-control SAM project
+Metadata:
+  HouseSubscription:
+    Description: Creates a subscription and a Topic that will be used in SAM House project.
+
+Resources: 
+  HouseControlTopic:
+    Type: AWS::SNS::Topic
+    Properties: 
+      DisplayName: House Control
+      FifoTopic: false
+      Tags:
+        - Key: project
+          Value: house-control
+  HouseControlSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Protocol: sms
+      TopicArn: !Ref HouseControlTopic
+
+  

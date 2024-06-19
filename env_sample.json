@@ -1,0 +1,11 @@
+{
+    "getAllItemsFunction": {
+        "SAMPLE_TABLE": "house-control-table"
+    },
+    "getByIdFunction": {
+        "SAMPLE_TABLE": "house-control-table"
+    },
+    "putItemFunction": {
+        "SAMPLE_TABLE": "house-control-table"
+    }
+  }
